@@ -1,29 +1,31 @@
 #2. El Código
 #python
-def notaMedia(a, b, c):
-    return (a + b + c) / 3 
-def aprobar(media):
-    if media<0 and media>10 :
+def calcularNotaMedia(nota1,nota2, nota3):
+    return (nota1 + nota2 + nota3) / 3 
+def aprobar(nota_media):
+    if nota_media<0 or nota_media>10 :
         print("nota media fuera de rango entre 0 y 10")
     else :
-            if media >= 9:
+            if nota_media >= 9:
                 print("Sobresaliente")
-            if media >= 7 and media < 9:
+            elif nota_media >= 7 :
                 print("Notable")
-            if media >= 5 and media < 7:
+            elif nota_media >= 5 :
                 print("Aprobado")
-            if media < 5:
+            else :
                 print("Suspenso")
     print("----------------------")
 
-def mostrar(nombre, a, b, c):
-    print("Alumno: " + nombre)
-    print("Nota 1: " + str(a))
-    print("Nota 2: " + str(b))
-    print("Nota 3: " + str(c))
-    aprobar(notaMedia())
+def alumnoAprobado(nombre_alumno, nota1, nota2, nota3):
+    print("Alumno: " + nombre_alumno)
+    print("Nota 1: " + str(nota1))
+    print("Nota 2: " + str(nota2))
+    print("Nota 3: " + str(nota3))
+    media = calcularNotaMedia(nota1, nota2, nota3)
+    print("media:"+ media)
+    aprobar(media)
 def main():
-    mostrar("Ana García", 8, 7, 9)
-    mostrar("Luis Pérez", 4, 5, 3)
-    mostrar("Marta Gómez", 6, 7, 5)
+    alumnoAprobado("Ana García", 8, 7, 9)
+    alumnoAprobado("Luis Pérez", 4, 5, 3)
+    alumnoAprobado("Marta Gómez", 6, 7, 5)
 main()
