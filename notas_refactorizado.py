@@ -22,7 +22,7 @@ def alumnoAprobado(nombre_alumno, nota1, nota2, nota3):
     print("Nota 2: " + str(nota2))
     print("Nota 3: " + str(nota3))
     media = calcularNotaMedia(nota1, nota2, nota3)
-    print("media:"+ media)
+    print("media:"+ str(media))
     aprobar(media)
 def main():
     alumnoAprobado("Ana García", 8, 7, 9)
